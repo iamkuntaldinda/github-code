@@ -1,0 +1,931 @@
+<HTML>
+	<HEAD>
+		<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+		<TITLE></TITLE>
+		<META NAME="GENERATOR" CONTENT="LibreOffice 4.1.6.2 (Linux)">
+		<META NAME="AUTHOR" CONTENT="user">
+		<META NAME="CREATED" CONTENT="20191202;204000000000000">
+		<META NAME="CHANGEDBY" CONTENT="user">
+		<META NAME="CHANGED" CONTENT="20191202;211213000000000">
+		<META NAME="DocSecurity" CONTENT="0">
+		<META NAME="KSOProductBuildVer" CONTENT="1033-11.2.0.9052">
+		<META NAME="LinksUpToDate" CONTENT="false">
+		<META NAME="ScaleCrop" CONTENT="false">
+		<STYLE TYPE="text/css">
+		<!--
+			@page { margin-left: 1.25in; margin-right: 1.25in; margin-top: 1in; margin-bottom: 1in }
+			P { margin-bottom: 0.08in; direction: ltr; widows: 2; orphans: 2 }
+			P.western { font-family: "Calibri", serif; so-language: en-US }
+			P.cjk { so-language: zh-CN }
+			P.ctl { font-family: ; so-language: ar-SA }
+		-->
+		</STYLE>
+		
+		<!-- jQuery library 
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+			<script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script> -->
+			
+			<Script>
+					function myFunction() {
+					var sTable = document.getElementById('contnet').innerHTML;
+	
+					var style = "<style>";
+					style = style + "table {width: 80%;font: 10px Calibri;}";
+					style = style + "table, th, td {border: solid 1px #DDD; border-collapse: collapse;";
+					style = style + "padding: 2px 3px;text-align: center;}";
+					style = style + "</style>";
+					ShowHide()
+					// CREATE A WINDOW OBJECT.
+	//				var win = window.open('', '', 'height=700,width=700');
+					 var a = document.getElementById("p_name").value;
+	//				win.document.write('<html><head>');
+	//				win.document.write('<title>Profile</title>');   // <title> FOR PDF HEADER.
+	//				win.document.write(style);           // ADD STYLE INSIDE THE HEAD TAG.
+	//				win.document.write('</head>');
+	//				win.document.write('<body>');
+	//				win.document.write(sTable);         // THE TABLE CONTENTS INSIDE THE BODY TAG.
+	//				win.document.write('</body></html>');
+	
+	//				win.document.close(); 	// CLOSE THE CURRENT WINDOW.
+	
+					//win.print();    // PRINT THE CONTENTS.
+					
+					window.open('', '', 'height=700,width=700');
+					window.print();
+				}
+				function ShowHide(){
+				
+					var name = document.getElementById("p_name").value;    // name show hide 
+					if(name){
+					document.getElementById("name_grid").innerHTML=name;
+					}else {
+					document.getElementById("name_grid").innerHTML='..............................................................................................';
+					}
+					document.getElementById("p_name").style.display = "none";
+					document.getElementById("name_grid").style.display = "block";
+					
+					var address = document.getElementById("p_address").value;    // address show hide 
+					if(address){
+					document.getElementById("address_grid").innerHTML=address;
+					}else {
+					document.getElementById("address_grid").innerHTML='..............................................................................................<br>..............................................................................................<br>..............................................................................................';
+					}
+					document.getElementById("p_address").style.display = "none";
+					document.getElementById("address_grid").style.display = "block";
+					
+					var bloodGroup = document.getElementById("p_bloodGroup").value;    // bloodGroup show hide 
+					if(bloodGroup){
+					document.getElementById("bloodGroup_grid").innerHTML=bloodGroup;
+					}else{
+					document.getElementById("bloodGroup_grid").innerHTML= '..............................................................................................'
+					}
+					document.getElementById("p_bloodGroup").style.display = "none";
+					document.getElementById("bloodGroup_grid").style.display = "block";
+					
+					var onsetOfFever = document.getElementById("p_onsetOfFever").value;    // onsetOfFever show hide 
+					if(onsetOfFever){
+						document.getElementById("onsetOfFever_grid").innerHTML=onsetOfFever;
+					}else{
+						document.getElementById("onsetOfFever_grid").innerHTML= '..............................................................................................'
+					}
+					document.getElementById("p_onsetOfFever").style.display = "none";
+					document.getElementById("onsetOfFever_grid").style.display = "block";
+					
+					var TimeOnsetFever = document.getElementById("p_TimeOnsetFever").value;    // TimeOnsetFever show hide 
+					if(TimeOnsetFever){
+						document.getElementById("grid_TimeOnsetFever").innerHTML=TimeOnsetFever;
+					}else{
+						document.getElementById("grid_TimeOnsetFever").innerHTML = '..............................................................................................'
+					}
+					document.getElementById("p_TimeOnsetFever").style.display = "none";
+					document.getElementById("grid_TimeOnsetFever").style.display = "block";
+					
+					var transport_val = document.getElementById("p_transport").value;    // transport show hide 
+					if(transport_val){
+						document.getElementById("grid_transport").innerHTML=transport_val;
+					}else{
+						document.getElementById("grid_transport_null").innerHTML= '..............................................................................................';
+					}
+					document.getElementById("p_transport").style.display = "none";
+					document.getElementById("grid_transport").style.display = "block";
+					
+					var distancePHC = document.getElementById("p_distancePHC").value;    // distancePHC show hide 
+					if(distancePHC){
+						document.getElementById("grid_distancePHC").innerHTML=distancePHC;
+					}else{
+						document.getElementById("grid_distancePHC_on_Null").innerHTML= '..............................................................................................';
+					}
+					document.getElementById("p_distancePHC").style.display = "none";
+					document.getElementById("grid_distancePHC").style.display = "block";
+					
+					//elementH 
+					document.getElementById("elementH").style.display = "none";
+					
+					
+					
+				}
+			</script>
+	
+			
+			<link rel="shortcut icon" type="image/x-icon" href="../static/images/favicon.png">
+			<meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no , maximum-scale=1 ,shrink-to-fit=no" >
+			<title>Hospital page</title>
+			<!-- Custom fonts for this template-->
+			<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet" type="text/css">
+			<!-- Google Fonts -->
+			<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap"
+			  rel="stylesheet">
+			<!-- css-links -->
+			<link href="../static/css/bootstrap.min.css" rel="stylesheet">
+			<link href="../static/css/style.css" rel="stylesheet">
+		  
+		  
+			<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Sacramento" rel="stylesheet">
+		  
+			  <link rel="stylesheet" href="../static/css_home/bootstrap.css">
+			  <link rel="stylesheet" href="../static/css_home/animate.css">
+			  <link rel="stylesheet" href="../static/css_home/owl.carousel.min.css">
+		  
+			  <link rel="stylesheet" href="../static/fonts/ionicons/css/ionicons.min.css">
+			  <link rel="stylesheet" href="../static/fonts/fontawesome/css/font-awesome.min.css">
+		  
+			  <!-- <link rel="stylesheet" href="../static/fonts/flaticon/font/flaticon.css"> -->
+			  <link rel="stylesheet" href="../static/css_home/bootstrap.min.css">
+		  
+			  <!-- Theme Style -->
+			  <link rel="stylesheet" href="../static/css_home/style.css">
+		
+	</HEAD>
+	<BODY LANG="en-US" DIR="LTR">
+	
+		<div class="header bg-white py-3 border-bottom">
+			<div class="container">
+			  <div class="row header_rw align-items-center">
+				<div class="col-6 col-sm-6">
+				  <div class="logo_cell">
+					<a href="home.html"><img src="../static/images/denlogo.jpeg" width="70" height="10" alt="logo"></a>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <!-- Ends Header Section -->
+		  
+  <!-- Starts Nav Section -->
+  <div class="navigation bg-white shadow-sm">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg p-0 navbar-light bg-white">
+        <a class="navbar-brand text-primary p-0 font-wight-medium" href="home.html"><span style="color:#ff1493;">APOLLONIUS</span>|VOICEBOT</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </div>
+  </div>
+  <!-- Ends Nav Section -->
+  <a style="display:flex; float:right; position:fixed; background-color: rgb(221, 245, 247); padding: 10px; top: 10px;z-index: 10" href="voicebot.html">
+    TALK WITH HEALTHBOT!
+  </a>
+
+	<div id="contnet">
+		<!-- HTML contnet goes here -->
+    <style>   
+       
+      main{
+      	overflow: scroll;
+  	}  
+    </style>     
+        
+    <main>  
+	<div align="center">
+	
+	<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US"><B>PATIENT’S
+	HISTORY</B></SPAN></FONT></P>
+	<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+	</P>
+	<OL TYPE=A>
+		<LI><P CLASS="western" STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US"><B>CLINICAL
+		ASSESSMENT BASED QUESTION</B></SPAN></FONT></P>
+	</OL>
+	<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+	</P>
+	<TABLE id="table-id" WIDTH=647 CELLPADDING=7 CELLSPACING=0 >
+		<COL WIDTH=13>
+		<COL WIDTH=237>
+		<COL WIDTH=54>
+		<COL WIDTH=18>
+		<COL WIDTH=8>	
+		<COL WIDTH=17>
+		<COL WIDTH=17>
+		<COL WIDTH=2>
+		<COL WIDTH=35>
+		<COL WIDTH=105>
+		<TR VALIGN=TOP>
+			<TD WIDTH=13 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">1</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=237 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P ALIGN=JUSTIFY STYLE="margin-bottom: 0in; background: #f8f9fa; border: none; padding: 0in; page-break-inside: auto; widows: 0; orphans: 0; page-break-after: auto">
+				<FONT FACE="SimSun, serif"><FONT SIZE=3><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Name
+				of the patient</SPAN></FONT></FONT></FONT></P>
+				<P ALIGN=JUSTIFY STYLE="background: #f8f9fa; border: none; padding: 0in; page-break-inside: auto; widows: 0; orphans: 0; page-break-after: auto">
+				<FONT FACE="SimSun"><FONT SIZE=3><SPAN LANG="ar-SA"><SPAN STYLE="font-variant: normal"><FONT COLOR="#222222"><SPAN STYLE="background: #f8f9fa"><FONT FACE="Nirmala UI"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">রোগীর
+				নাম</SPAN></FONT></FONT></SPAN></FONT></SPAN></SPAN></FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=8 WIDTH=353 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<span CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0" ><BR>
+					<input type="text" id = "p_name" name="Name" size="40">	
+				</span>
+				<span id="name_grid" class = "auto_show_hide_data">
+						
+				</span>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=13 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">2</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=237 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P ALIGN=LEFT STYLE="margin-bottom: 0in; background: #f8f9fa; border: none; padding: 0in; page-break-inside: auto; widows: 2; orphans: 2; page-break-after: auto">
+				<FONT FACE="SimSun, serif"><FONT SIZE=3><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Address
+				of the patient </SPAN></FONT></FONT></FONT>
+				</P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0in; background: #f8f9fa; border: none; padding: 0in; page-break-inside: auto; widows: 2; orphans: 2; page-break-after: auto">
+				<FONT FACE="SimSun"><FONT SIZE=3><SPAN LANG="ar-SA"><SPAN STYLE="font-variant: normal"><FONT COLOR="#222222"><SPAN STYLE="background: #f8f9fa"><FONT FACE="Nirmala UI"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">রোগীর
+				বাড়ির ঠিকানা</SPAN></FONT></FONT></SPAN></FONT></SPAN></SPAN></FONT></FONT></P>
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><BR>
+				</P>
+			</TD>
+			<TD COLSPAN=8 WIDTH=353 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<span CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><BR>
+						<textarea id = "p_address" rows="4" cols="50"></textarea>
+				</span>
+				<span id = "address_grid">
+				</span>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=13 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">3</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=237 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P ALIGN=LEFT STYLE="margin-bottom: 0in; background: #f8f9fa; border: none; padding: 0in; page-break-inside: auto; widows: 2; orphans: 2; page-break-after: auto">
+				<FONT FACE="SimSun, serif"><FONT SIZE=3><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Age
+				of the patient </SPAN></FONT></FONT></FONT>
+				</P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0in; background: #f8f9fa; border: none; padding: 0in; page-break-inside: auto; widows: 2; orphans: 2; page-break-after: auto">
+				<FONT FACE="SimSun"><FONT SIZE=3><SPAN LANG="ar-SA"><SPAN STYLE="font-variant: normal"><FONT COLOR="#222222"><SPAN STYLE="background: #f8f9fa"><FONT FACE="Nirmala UI"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">রোগীর
+				বয়স</SPAN></FONT></FONT></SPAN></FONT></SPAN></SPAN></FONT></FONT></P>
+				<!--<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><BR>
+				</P>-->
+			</TD>
+			<TD COLSPAN=8 WIDTH=353 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">
+				0-1YR  <input type="radio" name="age" value="0-1YR">
+				1-5YR  <input type="radio" name="age" value="1-5YR">
+				5-15YR  <input type="radio" name="age" value="5-15YR"> <br>
+				15-45YR  <input type="radio" name="age" value="15-45YR"> 
+				45-60YR  <input type="radio" name="age" value="45-60YR"> 
+				60YR ABOVE  <input type="radio" name="age" value="60YR ABOVE"> 
+				</SPAN></FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=13 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">4</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=237 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P ALIGN=LEFT STYLE="margin-bottom: 0in; background: #f8f9fa; border: none; padding: 0in; page-break-inside: auto; widows: 2; orphans: 2; page-break-after: auto">
+				<FONT FACE="SimSun, serif"><FONT SIZE=3><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Gender
+				of the patient </SPAN></FONT></FONT></FONT>
+				</P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0in; background: #f8f9fa; border: none; padding: 0in; page-break-inside: auto; widows: 2; orphans: 2; page-break-after: auto">
+				<FONT FACE="SimSun"><FONT SIZE=3><SPAN LANG="ar-SA"><SPAN STYLE="font-variant: normal"><FONT COLOR="#222222"><SPAN STYLE="background: #f8f9fa"><FONT FACE="Nirmala UI"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">রোগীর
+				লিঙ্গ</SPAN></FONT></FONT></SPAN></FONT></SPAN></SPAN></FONT></FONT></P>
+				<!--<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><BR>
+				</P>-->
+			</TD>
+			<TD COLSPAN=2 WIDTH=85 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Male  <input type="radio" name="Gender" value="Male"> 
+				</SPAN></FONT></P>
+			</TD>
+			<TD COLSPAN=4 WIDTH=86 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Female <input type="radio" name="Gender" value="Female"> 
+				</SPAN></FONT>
+				</P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=154 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Other<input type="radio" name="Gender" value="Other">
+				</SPAN></FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=13 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">5</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=237 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P ALIGN=LEFT STYLE="margin-bottom: 0in; background: #f8f9fa; border: none; padding: 0in; page-break-inside: auto; widows: 2; orphans: 2; page-break-after: auto">
+				<FONT FACE="SimSun, serif"><FONT SIZE=3><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Blood
+				group of the patient </SPAN></FONT></FONT></FONT>
+				</P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0in; background: #f8f9fa; border: none; padding: 0in; page-break-inside: auto; widows: 2; orphans: 2; page-break-after: auto">
+				<FONT FACE="SimSun"><FONT SIZE=3><SPAN LANG="ar-SA"><SPAN STYLE="font-variant: normal"><FONT COLOR="#222222"><SPAN STYLE="background: #f8f9fa"><FONT FACE="Nirmala UI"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">রোগীর
+				রক্তের গ্রুপ</SPAN></FONT></FONT></SPAN></FONT></SPAN></SPAN></FONT></FONT></P>
+			<!--	<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><BR>
+				</P> -->
+			</TD>
+			<TD COLSPAN=8 WIDTH=353 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<span  CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><BR>
+							<input id = "p_bloodGroup" type="text" name="Name" size="40">
+				</span>
+				<span id = "bloodGroup_grid">
+				</span>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=13 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">6</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=237 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P ALIGN=LEFT STYLE="margin-bottom: 0in; background: #f8f9fa; border: none; padding: 0in; page-break-inside: auto; widows: 2; orphans: 2; page-break-after: auto">
+				<FONT FACE="SimSun, serif"><FONT SIZE=3><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Does
+				the patient have fever? </SPAN></FONT></FONT></FONT>
+				</P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0in; background: #f8f9fa; border: none; padding: 0in; page-break-inside: auto; widows: 2; orphans: 2; page-break-after: auto">
+				<FONT FACE="SimSun"><FONT SIZE=3><SPAN LANG="ar-SA"><SPAN STYLE="font-variant: normal"><FONT COLOR="#222222"><SPAN STYLE="background: #f8f9fa"><FONT FACE="Nirmala UI"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">রোগীর
+				জ্বর আছে</SPAN></FONT></FONT></SPAN></FONT></SPAN></SPAN></FONT></FONT><FONT FACE="SimSun, serif"><FONT SIZE=3><SPAN STYLE="font-variant: normal"><FONT COLOR="#222222"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN STYLE="font-style: normal"><SPAN STYLE="background: #f8f9fa">?</SPAN></SPAN></FONT></FONT></SPAN></FONT></FONT></P>
+				<!--<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><BR>
+				</P> -->
+			</TD>
+			<TD COLSPAN=4 WIDTH=138 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Yes <input type="radio" name="Have_fever" value="Yes">
+				</SPAN></FONT>
+				</P>
+			</TD>
+			<TD COLSPAN=4 WIDTH=201 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">No <input type="radio" name="Have_fever" value="No">
+				</SPAN></FONT>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=13 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">7</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=237 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; widows: 0; orphans: 0">
+				<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">What is the
+				last recorded temperature?</SPAN></FONT></P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0in; background: #f8f9fa; border: none; padding: 0in; page-break-inside: auto; widows: 2; orphans: 2; page-break-after: auto"><A NAME="_GoBack"></A>
+				<FONT FACE="SimSun"><FONT SIZE=3><SPAN LANG="ar-SA"><SPAN STYLE="font-variant: normal"><FONT COLOR="#222222"><SPAN STYLE="background: #f8f9fa"><FONT FACE="Nirmala UI"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">সর্বশেষ
+				রেকর্ড করা</SPAN></FONT></FONT></SPAN></FONT></SPAN><SPAN STYLE="font-variant: normal"><FONT COLOR="#222222"><SPAN STYLE="background: #f8f9fa"><FONT FACE="Nirmala UI"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">
+				</SPAN></FONT></FONT></SPAN></FONT></SPAN><SPAN STYLE="font-variant: normal"><FONT COLOR="#222222"><SPAN STYLE="background: #f8f9fa"><FONT FACE="Nirmala UI"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">জ্বরের</SPAN></FONT></FONT></SPAN></FONT></SPAN><SPAN STYLE="font-variant: normal"><FONT COLOR="#222222"><SPAN STYLE="background: #f8f9fa"><FONT FACE="Nirmala UI"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">
+				</SPAN></FONT></FONT></SPAN></FONT></SPAN><SPAN STYLE="font-variant: normal"><FONT COLOR="#222222"><SPAN STYLE="background: #f8f9fa"><FONT FACE="Nirmala UI"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">
+				তাপমাত্রা কী</SPAN></FONT></FONT></SPAN></FONT></SPAN></SPAN></FONT></FONT><FONT FACE="SimSun, serif"><FONT SIZE=3><SPAN STYLE="font-variant: normal"><FONT COLOR="#222222"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN STYLE="font-style: normal"><SPAN STYLE="background: #f8f9fa">?</SPAN></SPAN></FONT></FONT></SPAN></FONT></FONT></P>
+			<!--	<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><BR>
+				</P> -->
+			</TD>
+			<TD COLSPAN=4 WIDTH=138 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><=104F  <input type="radio" name="temp_fever" value="<=104F"></P>
+			</TD>
+			<TD COLSPAN=4 WIDTH=201 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0">>104F  <input type="radio" name="temp_fever" value=">104F"></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=13 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">8</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=237 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; widows: 0; orphans: 0">
+				<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Days from
+				the onset of fever</SPAN></FONT></P>
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE=""><SPAN LANG="ar-SA"><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">কত</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">দিন</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">জ্বর</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">এসেছে
+				</SPAN></FONT></FONT></SPAN></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">?</SPAN></FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=8 WIDTH=353 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<span  CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><BR>
+						<input id = "p_onsetOfFever" type="text" name="onset_of_fever" size="40">
+				</span>
+				<span id = "onsetOfFever_grid">
+				</span>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=13 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">9</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=237 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; widows: 0; orphans: 0">
+				<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Time of the
+				onset of fever</SPAN></FONT></P>
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; widows: 0; orphans: 0">
+				<FONT FACE=""><SPAN LANG="ar-SA"><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">কখন</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">থেকে</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">জ্বর</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">এসেছে</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT></SPAN></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">?</SPAN></FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=8 WIDTH=353 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<span   CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><BR>
+							 <input id ="p_TimeOnsetFever" type="text" name="onset_of_fever" size="40">
+				</span>
+				<span id ="grid_TimeOnsetFever">
+				</span>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=13 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">10</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=237 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; widows: 0; orphans: 0">
+				<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Is the
+				patient pregnant?</SPAN></FONT></P>
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE=""><SPAN LANG="ar-SA"><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">রোগী</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">কি</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">গর্ভবতী
+				</SPAN></FONT></FONT></SPAN></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">?</SPAN></FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=4 WIDTH=138 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Yes <input type="radio" name="is_pregnant" value="Yes">
+				</SPAN></FONT>
+				</P>
+			</TD>
+			<TD COLSPAN=4 WIDTH=201 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">No <input type="radio" name="is_pregnant" value="No">
+				</SPAN></FONT>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=13 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">11</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=237 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; widows: 0; orphans: 0">
+				<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Is the
+				patient G6PD deficient ?</SPAN></FONT></P>
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE=""><SPAN LANG="ar-SA"><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">রোগী</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">কি</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT></SPAN></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">G6PD
+				</SPAN></FONT></FONT><FONT FACE=""><SPAN LANG="ar-SA"><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">ডেফিসিয়েন্ট</SPAN></FONT></FONT><FONT FACE="">
+				</FONT></SPAN></FONT><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">?</SPAN></FONT></P>
+			</TD>
+			<TD COLSPAN=4 WIDTH=138 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Yes  <input type="radio" name="G6PD" value="Yes">
+				</SPAN></FONT>
+				</P>
+			</TD>
+			<TD COLSPAN=4 WIDTH=201 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">No  <input type="radio" name="G6PD" value="No">
+				</SPAN></FONT>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=13 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">12</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=237 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; widows: 0; orphans: 0">
+				<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Is the
+				patient going through menstrual cycle?</SPAN></FONT></P>
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; widows: 0; orphans: 0">
+				<FONT FACE=""><SPAN LANG="ar-SA"><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">রোগীর
+				কি</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">এইমুহূর্তে</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">মেন্সট্রুয়াল</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">সাইকেল</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">চলছে
+				</SPAN></FONT></FONT></SPAN></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">?</SPAN></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">
+				</SPAN></FONT></FONT>
+				</P>
+				<!--<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><BR>
+				</P> -->
+			</TD>
+			<TD COLSPAN=4 WIDTH=138 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Yes   <input type="radio" name="menstrual_cycle" value="Yes">
+				</SPAN></FONT>
+				</P>
+			</TD>
+			<TD COLSPAN=4 WIDTH=201 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">No   <input type="radio" name="menstrual_cycle" value="No">
+				</SPAN></FONT>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=13 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">13</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=237 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; widows: 0; orphans: 0">
+				<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Does the
+				patient have any past dengue record?</SPAN></FONT></P>
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0 padding-bottom: 25px;"><FONT FACE=""><SPAN LANG="ar-SA"><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">রোগীর</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">কি</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">আগে</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">ডেঙ্গু</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">জ্বর</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt "><SPAN LANG="bn-IN">হয়েছিল</SPAN></FONT></FONT></SPAN></FONT></P>
+				<!--<P CLASS="western_padding" STYLE="" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><BR>
+				</P>--> 
+			</TD>
+			<TD COLSPAN=4 WIDTH=138 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Yes  <input type="radio" name="dengue_record" value="Yes">
+				</SPAN></FONT>
+				</P>
+			</TD>
+			<TD COLSPAN=4 WIDTH=201 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">No  <input type="radio" name="dengue_record" value="No">
+				</SPAN></FONT>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=13 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">14</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=237 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; widows: 0; orphans: 0">
+				<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Brown Rash
+				?</SPAN></FONT></P>
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE=""><SPAN LANG="ar-SA"><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">রোগীর</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">গায়ে</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">কি</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">খয়েরি</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">রঙের</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">রাশ</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">বেরিয়েছে</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT></SPAN></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">?</SPAN></FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=4 WIDTH=138 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Yes <input type="radio" name="Brown_Rash" value="Yes">
+				</SPAN></FONT>
+				</P>
+			</TD>
+			<TD COLSPAN=4 WIDTH=201 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">No  <input type="radio" name="Brown_Rash" value="No">
+				</SPAN></FONT>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=13 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">15</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=237 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; widows: 0; orphans: 0">
+				<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Black tarry
+				Stool ?</SPAN></FONT></P>
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE=""><SPAN LANG="ar-SA"><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">কালো</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">পায়খানা</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">হয়েছে</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT></SPAN></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">?</SPAN></FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=4 WIDTH=138 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Yes  <input type="radio" name="Black_tarry" value="Yes">
+				</SPAN></FONT>
+				</P>
+			</TD>
+			<TD COLSPAN=4 WIDTH=201 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">No  <input type="radio" name="Black_tarry" value="No">
+				</SPAN></FONT>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=13 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">16</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=237 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; widows: 0; orphans: 0">
+				<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Any sign of
+				bleeding</SPAN></FONT></P>
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; widows: 0; orphans: 0">
+				<FONT FACE=""><SPAN LANG="ar-SA"><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">রোগীর</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">কি</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">দাঁতের</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">মারি</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">কিংবা</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">শরীর</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">এর</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">অনন্য</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">কোথাও</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">দিয়ে</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">রক্ত</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">বেরোচ্ছে</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT></SPAN></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">?</SPAN></FONT></FONT></P>
+			<!--	<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><BR>
+				</P> -->
+			</TD>
+			<TD COLSPAN=4 WIDTH=138 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Yes  <input type="radio" name="bleeding" value="Yes">
+				</SPAN></FONT>
+				</P>
+			</TD>
+			<TD COLSPAN=4 WIDTH=201 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">No  <input type="radio" name="bleeding" value="No">
+				</SPAN></FONT>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=13 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">17</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=237 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; widows: 0; orphans: 0">
+				<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Does the
+				patient consume alcohol?</SPAN></FONT></P>
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; widows: 0; orphans: 0">
+				<FONT FACE=""><SPAN LANG="ar-SA"><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">রোগীর</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">কি</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">মদ্যপান</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">করে</SPAN></FONT></FONT></SPAN></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">?</SPAN></FONT></FONT></P>
+				<!--<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><BR>
+				</P>-->
+			</TD>
+			<TD COLSPAN=4 WIDTH=138 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Yes  <input type="radio" name="consume_alcohol" value="Yes">
+				</SPAN></FONT>
+				</P>
+			</TD>
+			<TD COLSPAN=4 WIDTH=201 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">No  <input type="radio" name="consume_alcohol" value="No">
+				</SPAN></FONT>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=13 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">18</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=237 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; widows: 0; orphans: 0">
+				<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Does the
+				patient smoke? </SPAN></FONT>
+				</P>
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE=""><SPAN LANG="ar-SA"><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">রোগী</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">কি</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">ধুম্র্যপান</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				 </FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">করে</SPAN></FONT></FONT></SPAN></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">?</SPAN></FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=4 WIDTH=138 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Yes  <input type="radio" name="smoke" value="Yes">
+				</SPAN></FONT>
+				</P>
+			</TD>
+			<TD COLSPAN=4 WIDTH=201 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">No  <input type="radio" name="smoke" value="No">
+				</SPAN></FONT>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=13 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">19</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=237 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; widows: 0; orphans: 0">
+				<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Does the
+				patient have any of the following chronic diseases?</SPAN></FONT></P>
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE=""><SPAN LANG="ar-SA"><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">রোগী</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">কি</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">এই</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">গুলির</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">মধ্যে</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">কোনো</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">অসুখ</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">এ</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">ভোগেন</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT></SPAN></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">?</SPAN></FONT></FONT></P>
+			</TD>
+			<TD WIDTH=54 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Diabetes <input type="radio" name="chronic_diseases" value="Diabetes">
+				</SPAN></FONT>
+				</P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=40 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">COPD <input type="radio" name="chronic_diseases" value="COPD">
+				</SPAN></FONT></P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=48 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Asthama  <input type="radio" name="chronic_diseases" value="Asthama">
+				</SPAN></FONT></P>
+			</TD>
+			<TD COLSPAN=2 WIDTH=50 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">High  
+				BP<input type="radio" name="chronic_diseases" value="High_BP"></SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=105 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Thyroid  <input type="radio" name="chronic_diseases" value="Thyroid">
+				</SPAN></FONT>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=13 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">20</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=237 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; widows: 0; orphans: 0">
+				<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Does the
+				patient suffer from Thalassemia?</SPAN></FONT></P>
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE=""><SPAN LANG="ar-SA"><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">রোগী</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">কি</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">থেলাসেমিয়া</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				 </FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">অসুখ</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">এ</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">ভোগেন</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT></SPAN></FONT><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">?</SPAN></FONT></P>
+			</TD>
+			<TD COLSPAN=4 WIDTH=138 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Yes  <input type="radio" name="Thalassemia" value="Yes">
+				</SPAN></FONT>
+				</P>
+			</TD>
+			<TD COLSPAN=4 WIDTH=201 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">No  <input type="radio" name="Thalassemia" value="No">
+				</SPAN></FONT>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=13 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">21</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=237 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; widows: 0; orphans: 0">
+				<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Is the
+				patient HIV positive?</SPAN></FONT></P>
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE=""><SPAN LANG="ar-SA"><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">রোগী</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">কি</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT></SPAN></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">HIV
+				+</SPAN></FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=4 WIDTH=138 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Yes  <input type="radio" name="HIV_positive" value="Yes">
+				</SPAN></FONT>
+				</P>
+			</TD>
+			<TD COLSPAN=4 WIDTH=201 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">No  <input type="radio" name="HIV_positive" value="No">
+				</SPAN></FONT>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=13 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">22</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=237 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; widows: 0; orphans: 0">
+				<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Is the
+				patient staying alone?</SPAN></FONT></P>
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE=""><SPAN LANG="ar-SA"><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">রোগী</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">কি</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">একা</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">থাকেন</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT></SPAN></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">?</SPAN></FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=4 WIDTH=138 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">Yes   <input type="radio" name="staying_alone" value="Yes">
+				</SPAN></FONT>
+				</P>
+			</TD>
+			<TD COLSPAN=4 WIDTH=201 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">No   <input type="radio" name="staying_alone" value="No">
+				</SPAN></FONT>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=13 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">23</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=237 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; widows: 0; orphans: 0">
+				<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">What is the
+				distance from PHC?</SPAN></FONT></P>
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE=""><SPAN LANG="ar-SA"><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">রোগীর</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">বাড়ি</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">থেকে</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">নিকটবর্তী</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">স্বাস্থ্য</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">কেন্দ্র</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">কত</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">দূরে</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT></SPAN></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">?</SPAN></FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=8 WIDTH=353 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+			<p>
+				<span  CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><BR>
+						<input id = "p_distancePHC" type="text" name="distance_from_PHC" size="40">
+				</span>
+				<span id = "grid_distancePHC">
+				</span>
+			</p>
+			<p id = "grid_distancePHC_on_Null">
+			</p>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=13 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">24</SPAN></FONT></P>
+			</TD>
+			<TD WIDTH=237 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; widows: 0; orphans: 0">
+				<FONT FACE="Times New Roman, serif"><SPAN LANG="en-US">What are
+				the means of transport?</SPAN></FONT></P>
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><FONT FACE=""><SPAN LANG="ar-SA"><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">রোগীর</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">বাড়ি</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">থেকে</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">নিকটবর্তী</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">স্বাস্থ্য</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">কেন্দ্র</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">নিয়ে</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">যাবার</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">জন্য</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">কি</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">উপায়</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="bn-IN">আছে</SPAN></FONT></FONT><FONT FACE=""><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT></SPAN></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">?</SPAN></FONT></FONT></P>
+			</TD>
+			<TD COLSPAN=8 WIDTH=353 STYLE="border: 1px solid #00000a; padding: 0in 0.08in">
+			<p>	<span  CLASS="western" ALIGN=JUSTIFY STYLE="widows: 0; orphans: 0"><BR>
+						<input id ="p_transport" type="text" name="transport" size="40">
+				</span>
+				<span id ="grid_transport">
+				</span>
+			</p>
+			<p id = "grid_transport_null">
+			</p>
+			</TD>
+
+		</TR>
+		</div>
+	</TABLE>
+	<P CLASS="western" STYLE="margin-bottom: 0in"><BR>		
+	</P>
+	<!--/div-->
+	<div id="elementH">
+	<button type="button" onclick="myFunction()">Submit</button>
+	</div> </div>
+
+	
+	<footer class="ftr">
+		<div class="row">
+		  <div class="col-12 text-md-center text-left">
+			<p>
+			  <h5>1st Multilingual Humanoid Conversational AI for Public Helth Managment In The World &copy;</h5>
+			</p>
+	
+			<p>Copyright &copy;
+			  <script>document.write(new Date().getFullYear());</script> All rights reserved <i class="fa fa-email"
+				aria-hidden="true"></i> by <a href="#" target="_blank">Apollonius </a>: Under The Guidance Of Dr. Amitabha
+			  Bhattacharya (MBBS(CMC,Cal),D.P.H(Cal))<br>
+			  <ul style="color: red; background-color: #acaaaa;">
+				<li>
+				  <h3 style="color: red;">Disclaimer: </h3>
+				</li>
+				<li>
+				  Issued In The Public Interest & Awareness Purpose Only & All The Informations In This Website Are
+				  Collected Online From <a href="https://www.who.int/">www.who.int</a>
+				</li>
+				<li>
+				  We Respect Data Privacy & We Are Not Storing Or Capturing Any Personal Data Through Our VoiceBot.
+				</li>
+				<li>
+				  No Password No Email ID No personal information whatsoever is required to access our website and the
+				  voicebot
+				</li>
+				<li>
+				  No Money or Donation is charged for using this voicebot. No Financial Data is required.
+				</li>
+				<li>
+				  This Is Dedicated For The Global Citizen For The Public Health Awareness Only
+				</li>
+				<li>
+				  We Respect & Comply with the "The Cyber Laws" as contained in the Information Technology Act, 2000 (“IT
+				  Act”) of India and the Cyber Security Protocols as laid down by the WHO.
+				</li>
+	
+			  </ul>
+			</p>
+			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+		  </div>
+		</div>
+		</div>
+	  </footer>
+	</main>
+	<!--<script type="text/javascript" src="js/jquery-2.1.3.js"></script>
+	<script type="text/javascript" src="js/jspdf.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	</BODY>
+	</HTML>
